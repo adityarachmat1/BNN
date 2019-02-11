@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout android:id="@+id/linearContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@+id/imgHapusBarbuk"
+        android:weightSum="7">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerJenis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:background="@null"
+            android:hint="Jenis"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:completionThreshold="1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/spinnerJumlah"
+            android:layout_marginRight="5dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerJumlah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="Jumlah"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/spinnerSatuan" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerSatuan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Satuan"
+            android:gravity="center"
+            android:inputType="text"
+            android:completionThreshold="1"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:background="@null"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgHapusBarbuk"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgHapusBarbuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/trash_copy"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#5d9ab9"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

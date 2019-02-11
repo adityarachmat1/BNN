@@ -1,0 +1,4 @@
+keystore : sinbnn1.jks
+password : sinbnn
+alias : sinbnn
+password : sinbnn

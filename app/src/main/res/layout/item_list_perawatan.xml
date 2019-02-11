@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <EditText
+        android:id="@+id/txtNamaPerawatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Peserta"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:drawableRight="@drawable/menu_down_light"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@color/colorputih"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/spinnerJenisKelamin"
+        android:layout_marginRight="40dp"/>
+
+    <ImageView
+        android:id="@+id/imgHapusPerawatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trash_copy"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#5d9ab9"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

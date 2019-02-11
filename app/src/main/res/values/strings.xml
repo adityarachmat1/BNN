@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SIN</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_tambah_pemusnahan_barang_bukti2">
+        TambahPemusnahanBarangBukti2Activity
+    </string>
+
+</resources>

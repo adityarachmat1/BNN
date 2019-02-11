@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/txtJenis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="shabu"
+        android:textAllCaps="true"
+        android:textSize="14dp"
+        android:textColor="@color/colorputih"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/txtJumlah"/>
+
+    <TextView
+        android:id="@+id/txtJumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textAllCaps="true"
+        android:textSize="14dp"
+        android:textColor="@color/colorputih"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/txtSatuan"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/txtSatuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gr"
+        android:textSize="14dp"
+        android:textColor="@color/colorputih"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5d9ab9"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

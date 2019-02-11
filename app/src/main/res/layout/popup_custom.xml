@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3">
+        
+        <ImageView android:id="@+id/imgClosePopup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/menu_close"/>
+
+        <LinearLayout android:id="@+id/relativeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal">
+            <ImageView android:id="@+id/iconTitle"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/pin_copy"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BUKA PETA LOKASI"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apakah anda yakin ingin membuka peta lokasi?"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:layout_below="@id/relativeTitle"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/txtMessage"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp">
+
+            <Button android:id="@+id/btnTidak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tidak"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:background="#ffffff"/>
+
+            <Button android:id="@+id/btnYa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ya"
+                android:textColor="#000000"
+                android:layout_margin="5dp"
+                android:background="#ffffff"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

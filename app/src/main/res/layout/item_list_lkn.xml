@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_4">
+
+        <LinearLayout
+            android:id="@+id/linearLokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/nm_jenis_brg_lkn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Jenis Barang"
+                android:textColor="@color/colortextkuning"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lokasi_lkn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colortextkuning"
+                android:textSize="14sp"
+                android:text="-"
+                android:textStyle="bold"
+                android:maxLines="3"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="13sp"
+                android:text="Jumlah"
+                android:textColor="@color/colorabuabu"/>
+
+            <TextView
+                android:id="@+id/total_brgLkn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorputih"
+                android:textAllCaps="true"
+                android:text="-"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:text="GRAM"
+                android:textColor="@color/colorabuabu"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

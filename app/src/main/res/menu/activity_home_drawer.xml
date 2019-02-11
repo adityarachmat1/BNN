@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_home"
+            android:title="Home" />
+        <!--<item-->
+        <!--android:id="@+id/nav_inbox"-->
+        <!--android:icon="@drawable/inbox_menu"-->
+        <!--android:title="Inbox" />-->
+        <!--<item-->
+        <!--android:id="@+id/nav_newsupdate"-->
+        <!--android:icon="@drawable/news_nav"-->
+        <!--android:title="News &amp; Updates" />-->
+
+        <item
+            android:id="@+id/nav_pemberantasan"
+            android:icon="@drawable/icon_pemberantasan"
+            android:title="Pemberantasan" />
+
+        <item
+            android:id="@+id/nav_pencegahan"
+            android:icon="@drawable/icon_pencegahan"
+            android:title="Pencegahan" />
+
+        <item
+            android:id="@+id/nav_pemberdayaan"
+            android:icon="@drawable/icon_pemberdayaan"
+            android:title="Pemberdayaan Masyarakat" />
+
+        <item
+            android:id="@+id/nav_rehabilitasi"
+            android:icon="@drawable/icon_rehabilitasi"
+            android:title="Jumlah Pasien Rehabilitasi" />
+
+        <item
+            android:id="@+id/nav_penanganankasusnarkoba"
+            android:title="Penangan Kasus narkoba" />
+
+        <item
+            android:id="@+id/nav_pemusnahanbarangbukti"
+            android:title="Pemusnahan Barang Bukti" />
+
+        <item
+            android:id="@+id/nav_razia"
+            android:title="Razia" />
+
+        <!--<item-->
+        <!--android:id="@+id/nav_sosialisasi"-->
+        <!--android:title="Sosialisasi"/>-->
+
+        <!--17 Nov 2017-->
+        <!--Menambahkan menu baru untuk advokasi-->
+        <!--START-->
+        <item
+            android:id="@+id/nav_rakor"
+            android:title="Kegitan Rapat Koordinasi" />
+
+        <item
+            android:id="@+id/nav_jejaring"
+            android:title="Kegitan Membangun Jejaring" />
+
+        <item
+            android:id="@+id/nav_asistensi"
+            android:title="Kegitan Asistensi" />
+
+        <item
+            android:id="@+id/nav_penguatanasistensi"
+            android:title="Kegitan Penguatan Asistensi" />
+
+        <item
+            android:id="@+id/nav_intervensi"
+            android:title="Kegitan Intervensi" />
+
+        <item
+            android:id="@+id/nav_supervisi"
+            android:title="Kegitan Supervisi" />
+
+        <item
+            android:id="@+id/nav_monev"
+            android:title="Kegitan Monitoring dan Evaluasi" />
+
+        <item
+            android:id="@+id/nav_bimtek"
+            android:title="Kegitan Bimbingan Teknis" />
+
+        <item
+            android:id="@+id/nav_sosialisasi"
+            android:title="Kegitan Sosialisasi" />
+        <!--END-->
+
+        <item
+            android:id="@+id/nav_mediaonline"
+            android:title="Media Onlite" />
+
+        <item
+            android:id="@+id/nav_mediapenyiaran"
+            android:title="Media Penyiaran" />
+
+        <item
+            android:id="@+id/nav_mediacetak"
+            android:title="Media Cetak" />/
+
+        <item
+            android:id="@+id/nav_mediakonvensional"
+            android:title="Media Konvensional" />
+
+        <item
+            android:id="@+id/nav_videotron"
+            android:title="Videotron" />
+
+        <item
+            android:id="@+id/nav_tesnarkobapositif"
+            android:title="Tes Narkoba Positif" />
+
+        <item
+            android:id="@+id/nav_alihfungsipeninjauanlahan"
+            android:title="Alih Fungsi Peninjauan Lahan" />
+
+        <item
+            android:id="@+id/nav_pelatihankonselor"
+            android:title="Pelatihan Konselor" />
+
+        <item
+            android:id="@+id/order_policy"
+            android:icon="@drawable/order_nav"
+            android:title="Order Policy" />
+        <item
+            android:id="@+id/order_status"
+            android:icon="@drawable/order_nav"
+            android:title="Order Status" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon_exit"
+            android:title="Logout" />
+    </group>
+</menu>

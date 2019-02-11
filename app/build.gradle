@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.0"
+    defaultConfig {
+        applicationId "com.bnn"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id               : "ffdb077e-d3fe-4c54-9ceb-026bd36c8431",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "283734267971"]
+        multiDexEnabled true
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+//    compile 'com.facebook.fresco:fresco:1.1.0'
+    compile 'com.github.GrenderG:Toasty:1.1.2'
+    compile 'com.sothree.slidinguppanel:library:3.3.1'
+    compile 'com.onesignal:OneSignal:[3.5.5]'
+    compile 'org.sufficientlysecure:html-textview:3.3'
+    compile 'com.karumi:dexter:4.1.0'
+    compile 'com.github.Mariovc:ImagePicker:1.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    //compile 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    compile 'com.google.android.gms:play-services:11.6.0'
+//    compile 'com.google.android.gms:play-services-maps:11.6.0'
+//    compile 'com.google.android.gms:play-services-plus:11.0.4'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true;
+    }
+
+    testCompile 'junit:junit:4.12'
+}

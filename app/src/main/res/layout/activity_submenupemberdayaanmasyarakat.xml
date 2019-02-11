@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolBar"
+        toolbar:contentInsetStart="0dp"
+        toolbar:contentInsetEnd="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:background="@color/colorbirumenu1">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView android:id="@+id/imgToogleMenu"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/menu"/>
+
+            <ImageView android:id="@+id/txtTitleMain"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:src="@drawable/main_menu_title"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:background="@color/colorbirumenu1"
+        android:gravity="center"
+        android:layout_below="@id/toolBar">
+
+        <ImageView
+            android:id="@+id/titlesubmenupemberantasan"
+            android:layout_width="275dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pemberdayaanmasyarakat"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorbirumenu2"
+        android:layout_below="@+id/layout_header"
+        android:layout_above="@+id/layout_footer">
+
+        <ListView
+            android:id="@+id/list_submenu"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:divider="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorbirumenu2"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Badan Narkotika Nasional - Copyright © 2017"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

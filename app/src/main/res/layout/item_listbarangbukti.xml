@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Jenis Barang Bukti"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/textViewJenisbarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shbabu"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:textColor="@color/colorputih"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="Jumlah"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/textViewJumlahbarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:textColor="@color/colorputih"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentEnd="true"
+                android:text="Satuan"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/textViewSatuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gr"
+                android:textSize="14dp"
+                android:textColor="@color/colorputih"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageView
+                android:id="@+id/imageViewhapus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/trash_copy"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

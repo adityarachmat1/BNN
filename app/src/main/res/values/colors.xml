@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f2f2f2</color>
+    <color name="colorPrimaryDark">#cccccc</color>
+    <color name="colorAccent">#f3cf00</color>
+    <color name="colorBackground">#f2f2f2</color>
+    <color name="colorLightGrey">#f2f2f2</color>
+
+    <color name="colorbirumenu1">#0f4669</color>
+    <color name="colorbirumenu2">#1c9bd7</color>
+    <color name="colorhearder">#4eceff</color>
+    <color name="colortextheader">#07294b</color>
+    <color name="colorputihlogin">#19ffffff</color>
+    <color name="colorabuabu">#acbdc5</color>
+    <color name="colorbuttontambah">#2b6cc2</color>
+
+    <color name="colorsearch">#ffe400</color>
+    <color name="colortextkuning">#fffc00</color>
+    <color name="colortextabu2">#acbdc5</color>
+    
+    <color name="colorputih">#f2f2f2</color>
+    <color name="colorkuning">#f6fc00</color>
+    <color name="colorhitambiru">#07294b</color>
+
+    <color name="colorbirugelap">#123368</color>
+    <color name="colorbirumuda">#1AAEE7</color>
+    <color name="colorbirupucat">#264373</color>
+    <color name="colorbiruputih">#19ffffff</color>
+    
+    <!--Ditambahkan 21 Nov 2017-->
+    <color name="lineColorWhite">#e4f3fb</color>
+</resources>

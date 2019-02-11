@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Nama :"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textViewPositif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/textView3"
+                android:text="(Nama Pelaku)"
+                android:textAllCaps="true"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageViewhapus"
+                android:layout_alignStart="@+id/textView3"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textViewjeniskelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView6"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_marginRight="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/textView6"
+                android:text="Laki-laki"
+                android:textAllCaps="true"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageViewhapus"
+                android:layout_alignStart="@+id/textView3"
+                android:text="Jenis Kelamin :"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textViewjeniskelamin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/textView6"
+                android:text="Laki-laki"
+                android:textAllCaps="true"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Kewarganegaraan :"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textViewkewarganegaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80dp"
+                android:layout_marginStart="19dp"
+                android:text="Indonesia"
+                android:textAllCaps="true"
+                android:textColor="@color/colorputih"
+                android:textSize="14dp"
+                android:layout_alignBaseline="@+id/textView7"
+                android:layout_alignBottom="@+id/textView7"
+                android:layout_toEndOf="@+id/textView7" />
+
+            <ImageView
+                android:id="@+id/imageViewhapus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/trash_copy" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

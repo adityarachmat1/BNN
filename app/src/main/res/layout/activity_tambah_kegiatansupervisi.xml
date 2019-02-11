@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_blue_gradient">
+
+    <android.support.v7.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolBar"
+        toolbar:contentInsetStart="0dp"
+        toolbar:contentInsetEnd="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:background="@drawable/dark_blue_flat"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView android:id="@+id/imgToogleMenu"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/menu"/>
+
+            <ImageView
+                android:id="@+id/txtTitleMain"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:src="@drawable/main_menu_title"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"/>
+
+            <ImageView
+                android:id="@+id/txtTitleMain2"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pencegahan"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorbirumuda"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/menu_back_dark" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Supervisi"
+                android:textAllCaps="true"
+                android:textColor="@color/colorbirugelap"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/menu_add"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layoutUbahTambahSupervisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:divider="@drawable/divider"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah data baru"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorabuabu"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutJudulNoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. ID"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutContainerNoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edNoId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_edittext_white"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingRight="35dp"
+                    android:text="-"
+                    android:textColor="@color/colorputih"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bentuk Kegiatan"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <EditText
+                    android:id="@+id/edJenisKegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14sp"
+                    android:text=""
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="35dp"
+                    android:textColor="@color/colorputih"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Kegiatan"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edTanggalKegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:maxLines="1"
+                    android:cursorVisible="false"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:textColor="@color/colorputih"/>
+
+                <ImageView
+                    android:id="@+id/imgTanggalKejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/calendar_light"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Lokasi Kegiatan"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText android:id="@+id/edAlamatLokasiKegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textColor="@color/colorputih" />
+
+                <ImageView
+                    android:id="@+id/imgLokasiKegiatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pin_copy"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Kabupaten"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText android:id="@+id/edLokasiKegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textColor="@color/colorputih" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sasaran"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radiosasaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/INSTITUSI_PEMERINTAH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Institusi Pemerintah" />
+
+                    <RadioButton
+                        android:id="@+id/INSTITUSI_SWASTA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Institusi Swasta" />
+
+                    <RadioButton
+                        android:id="@+id/LINGKUNGAN_PENDIDIKAN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lingkungan Pendidikan" />
+
+                    <RadioButton
+                        android:id="@+id/LINGKUNGAN_MASYARAKAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lingkungan Masyarakat" />
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/separatorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/radiosasaran"
+                    android:layout_marginTop="10dp"
+                    android:background="#5d9ab9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftar Instansi"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#acbdc5"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/imgTambahInstansi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_add_copy"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <View
+                    android:id="@+id/separatorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#5d9ab9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:id="@+id/headerInstansi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtNamaInstansi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:text="Nama Instansi"
+                        android:textColor="@color/colorputih"
+                        android:layout_toLeftOf="@+id/txtPesertaInstansi"/>
+
+                    <TextView
+                        android:id="@+id/txtPesertaInstansi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="Jumlah Peserta"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorputih"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/listLayoutTambahInstansi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/headerInstansi">
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edInstansi"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_edittext_white"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:paddingRight="35dp"
+                    android:textColor="@color/colorputih"
+                    android:textSize="14dp"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/edJumlahPeserta"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_edittext_white"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:paddingRight="35dp"
+                    android:textColor="@color/colorputih"
+                    android:textSize="14dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Asal Peserta Kegiatan"-->
+                    <!--android:textSize="14dp"-->
+                    <!--android:textColor="@color/colorBackground" />-->
+            <!--</LinearLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<EditText android:id="@+id/edAsalPesertaKegiatan"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/selector_edittext_white"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:textSize="14dp"-->
+                    <!--android:inputType="text"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:paddingBottom="10dp"/>-->
+            <!--</RelativeLayout>-->
+
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Peserta Kegiatan"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText android:id="@+id/edJumlahPeserta"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:textSize="14dp"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:hint="0"
+                    android:textColor="@color/colorputih"
+                    android:layout_toLeftOf="@+id/txtBarang"/>
+
+                <TextView
+                    android:id="@+id/txtBarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orang"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="150dp"
+                    android:layout_alignParentRight="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#5d9ab9"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sumber Biaya"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <EditText
+                    android:id="@+id/edSumberBiayaKegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14sp"
+                    android:text=""
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorputih"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uraian Singkat Materi"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edUraianSingkatMateri"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_edittext_white"
+                    android:textSize="14sp"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:paddingRight="35dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorputih"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto"
+                    android:textColor="@color/colorputih"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtInfoUbah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="*Klik pada gambar untuk ubah"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/fotobarangbukti"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0.35">
+
+                    <ImageView
+                        android:id="@+id/imageViewbarangbukti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_upload_photo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fotopelaku"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0.35">
+
+                    <ImageView
+                        android:id="@+id/imageViewpelaku"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_upload_photo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fotolokasi"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.35">
+
+                    <ImageView
+                        android:id="@+id/imageViewlokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_upload_photo" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#5d9ab9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <Button
+                    android:id="@+id/btnBatal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginRight="40dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:background="@color/colorbuttontambah"
+                    android:text="Batal"
+                    android:textColor="@color/colorputih"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorbuttontambah"
+                    android:text="Simpan"
+                    android:textColor="@color/colorputih"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_footer1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Badan Narkotika Nasional - Copyright © 2017"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layoutUbahTambahPeserta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ScrollView
+        android:id="@+id/layoutMiddleBarbuk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@id/layoutFooter">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/layoutFooter">
+
+            <RelativeLayout android:id="@+id/layoutRelativeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/titleBarangBukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftar Peserta"
+                    android:textColor="#acbdc5"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/imgUbahTambahPeserta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_add_copy"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"/>
+            </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutRelativeTitleList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2.5"
+                    android:layout_below="@+id/layoutRelativeTitle"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp">
+                 <TextView
+                    android:id="@+id/titleNamaPeserta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Nama"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/titleJekelPeserta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jenis Kelamin"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listLayoutTambahPeserta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutRelativeTitleList"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnKembaliPeserta"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorbuttontambah"
+                android:text="Kembali"
+                android:textColor="@color/colorputih"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_footer2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Badan Narkotika Nasional - Copyright © 2017"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layoutUbahTambahPeserta"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="visible">-->
+
+    <!--<ScrollView-->
+    <!--android:id="@+id/layoutMiddleBarbuk"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_above="@id/layoutFooter">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_above="@+id/layoutFooter">-->
+
+    <!--<RelativeLayout android:id="@+id/layoutRelativeTitle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<TextView-->
+    <!--android:id="@+id/titleBarangBukti"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Daftar Peserta"-->
+    <!--android:textColor="#acbdc5"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imgUbahTambahPeserta"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/menu_add_copy"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_margin="20dp"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layoutRelativeTitleList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="2.5"-->
+    <!--android:layout_below="@+id/layoutRelativeTitle"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginTop="20dp">-->
+    <!--<TextView-->
+    <!--android:id="@+id/titleNamaPeserta"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1.5"-->
+    <!--android:text="Nama"-->
+    <!--android:textColor="#ffffff" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/titleJekelPeserta"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="Jenis Kelamin"-->
+    <!--android:textColor="#ffffff" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/listLayoutTambahPeserta"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/layoutRelativeTitleList"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:orientation="vertical">-->
+
+    <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</ScrollView>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layoutFooter"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:gravity="center_horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnKembaliPeserta"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorbuttontambah"-->
+    <!--android:text="Kembali"-->
+    <!--android:textColor="@color/colorputih"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layout_footer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@android:color/transparent">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView22"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="Badan Narkotika Nasional - Copyright © 2017"-->
+    <!--android:textColor="@color/colorPrimary"-->
+    <!--android:textSize="14sp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="25dp"/>-->
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
